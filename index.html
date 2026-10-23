@@ -53,7 +53,7 @@ html.mobile-device #hud .buttons button{font-size:9px;padding:5px}
 <body>
 <div id="hud">
  <div class="panel"><b>🌾 شبیه‌ساز زندگی</b><br>💰 پول: <b id="money">۰</b> تومان<br>🌾 گندم: <b id="wheat">۰</b> دانه<br>🚜 سرعت: <b id="speed">۰</b> کیلومتر/ساعت<br>📍 مسیر: <span id="distance">مزرعه سوهان</span></div>
- <div class="panel">وضعیت: <span id="status">پیاده</span><br>صندلی: <span id="seat">بیرون تراکتور</span><br>دوربین: <span id="camstatus">سوم‌شخص</span><br>ملک: <span id="property">هنوز ملکی نخریدی</span><div class="buttons"><button id="buyLand">خرید زمین — ۳۰۰٬۰۰۰</button><button id="buyHouse">خرید خانه خالی — ۳۰۰٬۰۰۰</button></div></div>
+ <div class="panel">وضعیت: <span id="status">پیاده</span><br>صندلی: <span id="seat">بیرون تراکتور</span><br>دوربین: <span id="camstatus">سوم‌شخص</span><br>ملک: <span id="property">هنوز ملکی نخریدی</span><div class="buttons"><button id="buyLand">خرید زمین — ۳۰۰٬۰۰۰</button><button id="buyHouse">خرید خانه خالی — ۳۰۰٬۰۰۰</button><button id="quickOnlineBtn" type="button">🌐 ساخت اتاق آنلاین</button></div></div>
 </div>
 <div id="help" class="panel"><b>🎮 راهنما</b><br>پیاده: <span class="key">W</span> حرکت، <span class="key">A/D</span> چرخش مثل GTA؛ خودرو: <span class="key">W/S</span> گاز/دنده‌عقب، <span class="key">A/D</span> فرمان<br>برداشت دقیقاً ۱ دانه: <span class="key">E</span> (نزدیک گندم)<br>سوارشدن: <span class="key">R</span>؛ صندلی شاگرد تراکتور: <span class="key">P</span>؛ پیاده‌شدن: <span class="key">Q</span><br>دوربین تراکتور: ماوس؛ <span class="key">C</span> داخل/بیرون<br>اول‌شخص پیاده: <span class="key">V</span>؛ فروش عادی با <span class="key">F</span> (سُه ۵٬۰۰۰؛ قزوین ۱۰٬۰۰۰؛ طالقان ۱۵٬۰۰۰ تومان)؛ فروش ویژه با <span class="key">G</span> (قیمت فروشندهٔ هر منطقه)<br>نزدیک فروشندهٔ هر منطقه: <span class="key">G</span> فروش ویژه؛ گفتگو با NPC: <span class="key">T</span><br><span class="small">نکته: برای چرخاندن دوربین، داخل صفحه بازی کلیک کن؛ پول شروع ۰ تومان است. کیلومترهای سفر طبق مقیاس داخلی همین مسیر بازی محاسبه می‌شوند.</span></div>
 <div id="mobileControls" aria-label="کنترل‌های لمسی بازی">
@@ -88,7 +88,7 @@ html.mobile-device #hud .buttons button{font-size:9px;padding:5px}
 <div id="outfitChoice"><label for="shirtColorSelect">👕 رنگ لباس:</label><select id="shirtColorSelect"><option value="#276487">آبی</option><option value="#287d49">سبز</option><option value="#a93e32">قرمز</option><option value="#343740">ذغالی</option><option value="#c39a36">طلایی</option></select></div>
 <p class="small">این انتخاب فعلاً روی همین دستگاه ذخیره می‌شود. حساب کاربری و همگام‌سازی رنگ لباس پس از پیاده‌سازی سرور آنلاین اضافه می‌شود.</p><p class="small">برای محیط سه‌بعدی و تصویر مرجع تراکتور اتصال اینترنت لازم است. فایل را با Live Server اجرا کن.</p><p class="small">اعتبار تصویر تراکتور: High Contrast، Wikimedia Commons، مجوز CC BY 3.0 DE — <a href="https://commons.wikimedia.org/wiki/File:Side_view_of_a_vintage_tractor.JPG" target="_blank" rel="noopener noreferrer" style="color:#ffe28a">دیدن منبع عکس</a></p>
 <div class="net-controls"><h3>🌐 بازی دونفره از راه دور</h3><label for="playerNameInput" class="small">اسم مستعار داخل بازی (اطلاعات شخصی ننویس):</label><input id="playerNameInput" maxlength="20" placeholder="مثلاً شخم‌زن_۲" autocomplete="nickname">
-<div class="net-row"><button id="hostOnlineBtn" type="button">ساخت اتاق و شروع</button></div>
+<div class="net-row"><button id="hostOnlineBtn" type="button">ساخت اتاق و شروع آنلاین</button></div><p class="small">می‌توانی اول «شروع بازی آفلاین» را بزنی؛ داخل بازی هم دکمهٔ «ساخت اتاق آنلاین» هست تا بعداً اتاق بسازی.</p>
 <label for="roomCodeInput" class="small">کد اتاقی که دوستت فرستاده:</label><input id="roomCodeInput" maxlength="100" placeholder="کد اتاق را اینجا بچسبان" autocomplete="off">
 <div class="net-row"><button id="joinOnlineBtn" type="button">پیوستن به اتاق</button></div><p id="networkStartStatus">برای آنلاین بازی‌کردن، هر دو نفر باید همین نسخهٔ بازی را از یک لینک اینترنتی باز کنید.</p></div>
 <button id="play" type="button">شروع بازی آفلاین</button><p id="loadtext" class="small"></p></div></div>
@@ -785,10 +785,12 @@ function update(dt){if(!started)return;
   const vehicle=mode==='carDriver'&&activeCar?activeCar:mode==='bikeDriver'&&activeBike?activeBike:tractor;
   const isBike=mode==='bikeDriver';
   // سرعت‌ها بر اساس متغیر داخلی بازی‌اند: تراکتور حداکثر ۲۵۰ کیلومتر/ساعت نشان می‌دهد؛ ماشین و موتور سریع‌ترند.
-  const forwardLimit=isBike?96:mode==='carDriver'?112:78.125;
-  const reverseLimit=isBike?-24:mode==='carDriver'?-30:-12;
+  // تراکتور عمداً نرم‌تر و کم‌سرعت‌تر از نسخهٔ قبلی است؛ نمایشگر همچنان سقف ۲۵۰ کیلومتر/ساعت دارد.
+  const forwardLimit=isBike?96:mode==='carDriver'?112:34;
+  const reverseLimit=isBike?-24:mode==='carDriver'?-30:-7;
   const target=keys.w?forwardLimit:keys.s?reverseLimit:0;
-  speed=THREE.MathUtils.damp(speed,target,keys.w||keys.s?1.65:2.9,dt);
+  const accelerationRate=mode==='driver'?1.15:(keys.w||keys.s?1.65:2.9);
+  speed=THREE.MathUtils.damp(speed,target,accelerationRate,dt);
   speed=THREE.MathUtils.clamp(speed,reverseLimit,forwardLimit);
   const turning=(keys.a?1:0)-(keys.d?1:0);steer=THREE.MathUtils.damp(steer,turning,isMobileDevice?10:5.5,dt);
   const maxYawRate=isBike?(isMobileDevice?2.45:1.75):mode==='carDriver'?(isMobileDevice?2.65:1.9):(isMobileDevice?1.05:.68);
@@ -816,7 +818,7 @@ function update(dt){if(!started)return;
  else if(nb&&nb.distance<4.7&&mode==='foot')prompt='🏍️ موتور طالقان نزدیکته — R سوار شو؛ Q پیاده شو';
  else if(nc&&nc.distance<4.7&&mode==='foot')prompt=ownedCars.includes(nc.car.userData.carId)?`🚘 ${nc.car.userData.carName} مال توست — R سوار شو`:`🔒 ${nc.car.userData.carName}: برای سوارشدن باید بخری.`;
  else if(tractorNear)prompt='🚜 نزدیک تراکتور: R صندلی راننده · P صندلی شاگرد';else if(fieldNear)prompt='🌾 نزدیک گندم‌زار: هر بار E فقط یک دانه';else{const nn=nearestNPC(actor);if(nn&&nn.distance<5)prompt=`💬 ${nn.npc.userData.npcName} — T گفتگو`;}
- $('interact').textContent=prompt;$('interact').style.display=prompt?'block':'none';const displaySpeed=mode==='driver'?Math.min(250,Math.abs(speed)*3.2):Math.abs(speed)*3.2;$('speed').textContent=number(displaySpeed);updateRemoteVisuals(dt);sendNetworkState(dt);
+ $('interact').textContent=prompt;$('interact').style.display=prompt?'block':'none';const displaySpeed=(mode==='driver'||mode==='passenger')?Math.min(250,Math.abs(speed)*(250/34)):Math.abs(speed)*3.2;$('speed').textContent=number(displaySpeed);updateRemoteVisuals(dt);sendNetworkState(dt);
  const p=actor;if(p.z>-425)$('distance').textContent='مزرعهٔ سُه';else if(p.z>=JUNCTION.z){const leftKm=Math.max(0,(p.z-JUNCTION.z)/ROAD_UNITS_PER_KM);const remain=140+leftKm;$('distance').textContent=`مسیر قزوین · ${number(remain)} کیلومتر مانده`;}
  else if(p.x>=0){const d=(p.x-JUNCTION.x)*QAZVIN_ROUTE.ux+(p.z-JUNCTION.z)*QAZVIN_ROUTE.uz;const remain=Math.max(0,140-d/ROAD_UNITS_PER_KM);$('distance').textContent=remain<1?'قزوین':`مسیر قزوین · ${number(remain)} کیلومتر مانده`;}
  else{const d=(p.x-JUNCTION.x)*TALEGHAN_ROUTE.ux+(p.z-JUNCTION.z)*TALEGHAN_ROUTE.uz;const remain=Math.max(0,230-d/ROAD_UNITS_PER_KM);$('distance').textContent=remain<1?'طالقان':`مسیر طالقان · ${number(remain)} کیلومتر مانده`;}
@@ -857,13 +859,13 @@ async function hostOnlineGame(){
  localPlayerName=cleanNickname($('playerNameInput').value);$('hostOnlineBtn').disabled=true;$('joinOnlineBtn').disabled=true;setNetworkStartStatus('در حال ساخت اتاق آنلاین…');
  try{
   await loadPeerJS();multiplayerRole='host';peerInstance=createPeerInstance();
-  peerInstance.on('open',id=>{myPeerId=id;setNetworkStartStatus('اتاق ساخته شد؛ بازی شروع می‌شود. کد اتاق را از پنل بالای بازی کپی کن و برای پسردایی‌ات بفرست.');updateOnlineHud();void startGame();});
+  peerInstance.on('open',id=>{myPeerId=id;setNetworkStartStatus(started?'اتاق ساخته شد؛ کد اتاق را از پنل آنلاین کپی کن و برای پسرعموت بفرست.':'اتاق ساخته شد؛ بازی آنلاین شروع می‌شود. کد اتاق را از پنل بالای بازی کپی کن و برای پسرعموت بفرست.');updateOnlineHud();if(!started)void startGame();});
   peerInstance.on('connection',conn=>{if(peerConnection&&peerConnection.open){conn.close();setNetworkStartStatus('این اتاق دو نفر دارد و پر شده است.');return;}attachPeerConnection(conn);});
   peerInstance.on('error',err=>{console.warn('PeerJS error:',err);const msg=err?.type==='peer-unavailable'?'کد اتاق پیدا نشد؛ کد درست را بررسی کن.':`خطای اتصال آنلاین: ${err?.type||err?.message||'نامشخص'}`;setNetworkStartStatus(msg);if(!peerConnection?.open)resetFailedPeerAttempt();});
  }catch(err){multiplayerRole='offline';peerInstance=null;setNetworkStartStatus(err.message||'ساخت اتاق ناموفق شد.');$('hostOnlineBtn').disabled=false;$('joinOnlineBtn').disabled=false;}
 }
 async function joinOnlineGame(){
- const room=$('roomCodeInput').value.trim();if(!room){setNetworkStartStatus('اول کد اتاق دوستت را وارد کن.');return;}if(peerInstance){setNetworkStartStatus('ارتباط قبلی هنوز فعال است؛ اول قطعش کن یا صفحه را تازه کن.');return;}
+ const room=$('roomCodeInput').value.trim().replace(/\s+/g,'');if(!room){setNetworkStartStatus('اول کد اتاق دوستت را وارد کن.');return;}if(peerInstance){setNetworkStartStatus('ارتباط قبلی هنوز فعال است؛ اول قطعش کن یا صفحه را تازه کن.');return;}
  localPlayerName=cleanNickname($('playerNameInput').value);$('hostOnlineBtn').disabled=true;$('joinOnlineBtn').disabled=true;setNetworkStartStatus('در حال اتصال به اتاق دوستت…');
  try{
   await loadPeerJS();multiplayerRole='guest';peerInstance=createPeerInstance();
@@ -876,7 +878,7 @@ function attachPeerConnection(conn){
  if(peerConnection&&peerConnection!==conn&&peerConnection.open){conn.close();return;}
  peerConnection=conn;
  conn.on('open',()=>{
-  updateOnlineHud();setNetworkStartStatus('وصل شدی! بازیکن دیگر باید در همان نقشه دیده شود.');
+  updateOnlineHud();setNetworkStartStatus('وصل شدی! بازیکن دیگر با حرکتش در نقشه نمایش داده می‌شود.');
   try{conn.send({type:'hello',payload:{name:localPlayerName,color:shirtColor}});}catch(e){}
   createRemoteVisuals();
   if(multiplayerRole==='guest'&&!started)void startGame();
@@ -966,6 +968,7 @@ function disconnectOnline(){
 function buildInviteUrl(){try{const u=new URL(location.href);u.searchParams.set('room',myPeerId);return u.toString();}catch(e){return location.href;}}
 $('hostOnlineBtn').addEventListener('click',hostOnlineGame);
 $('joinOnlineBtn').addEventListener('click',joinOnlineGame);
+$('quickOnlineBtn').addEventListener('click',()=>{if(multiplayerRole!=='offline'||peerInstance){updateOnlineHud();tell('اتصال آنلاین فعال است؛ کد را از پنل بالای صفحه کپی کن.');return;}void hostOnlineGame();});
 $('copyRoomCode').addEventListener('click',async()=>{if(!myPeerId){tell('هنوز کد اتاق ساخته نشده.');return;}try{await navigator.clipboard.writeText(myPeerId);tell('کد اتاق کپی شد؛ برای دوستت بفرست.');}catch(e){prompt('این کد را برای دوستت بفرست:',myPeerId);}});
 $('copyInviteLink').addEventListener('click',async()=>{if(!myPeerId){tell('هنوز کد اتاق ساخته نشده.');return;}const link=buildInviteUrl();try{await navigator.clipboard.writeText(link);tell('لینک دعوت کپی شد؛ دوستت باید همان لینک بازی را باز کند و روی پیوستن بزند.');}catch(e){prompt('این لینک دعوت را برای دوستت بفرست:',link);}});
 $('disconnectOnline').addEventListener('click',disconnectOnline);
